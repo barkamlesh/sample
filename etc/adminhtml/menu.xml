@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Kamlesh_Sample::sample" title="Sample" module="Kamlesh_Sample" sortOrder="10" parent="Magento_Backend::content" resource="Kamlesh_Sample::sample"/>
+        <add id="Kamlesh_Sample::manage_sample" title="Manage Samples" module="Kamlesh_Sample" sortOrder="10" parent="Kamlesh_Sample::sample" action="sample/sample/index" resource="Kamlesh_Sample::manage_sample"/>
+    </menu>
+</config>

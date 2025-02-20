@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <title>View Sample</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Kamlesh\Sample\Block\Adminhtml\Sample\View" name="sample_view" template="Kamlesh_Sample::sample/view.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
+
+

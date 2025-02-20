@@ -1,0 +1,28 @@
+{
+    "name": "barkamlesh/sample",
+    "version": "1.0.0",
+    "description": "Sample maganto module",
+    "require": {
+        
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Kamlesh Bar",
+            "email": "kamlesh@example.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kamlesh\\Sample\\": ""
+        }
+    }
+    
+}

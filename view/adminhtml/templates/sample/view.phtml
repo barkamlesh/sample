@@ -1,0 +1,13 @@
+<?php
+/** @var \Kamlesh\Sample\Block\Adminhtml\Sample\View $block */
+$sample = $block->getSample();
+$backUrl = $block->getUrl('*/*/');
+?>
+
+<div class="sample-view">
+    <p><strong><?= __('ID:') ?></strong> <?= $sample->getId() ?></p>
+    <p><strong><?= __('Name:') ?></strong> <?= $sample->getName() ?></p>
+    <p><strong><?= __('Description:') ?></strong> <?= $sample->getDescription() ?></p>
+    <p><strong><?= __('Status:') ?></strong> <?= $sample->getStatus() ?></p>
+    <button onclick="setLocation('<?= $backUrl ?>')"><?= __('Back to Grid') ?></button>
+</div>
