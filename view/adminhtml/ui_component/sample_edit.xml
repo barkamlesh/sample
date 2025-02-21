@@ -11,10 +11,10 @@
             <item name="namespace" xsi:type="string">sample_edit</item>
         </item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
-        <!-- <item name="buttons" xsi:type="array">
+        <item name="buttons" xsi:type="array">
             <item name="save" xsi:type="string">Kamlesh\Sample\Block\Adminhtml\Sample\Edit\SaveButton</item>
             <item name="back" xsi:type="string">Kamlesh\Sample\Block\Adminhtml\Sample\Edit\BackButton</item>
-        </item> -->
+        </item>
     </argument>
     <dataSource name="sample_edit_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
@@ -22,11 +22,11 @@
             <argument name="name" xsi:type="string">sample_edit_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
-            <!-- <argument name="data" xsi:type="array">
+            <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="submit_url" xsi:type="url" path="sample/sample/save"/>
                 </item>
-            </argument> -->
+            </argument>
         </argument>
         <argument name="data" xsi:type="array">
             <item name="js_config" xsi:type="array">
@@ -65,6 +65,25 @@
                 <label translate="true">Description</label>
                 <dataScope>description</dataScope>
             </settings>
+        </field>
+        <field name="status" sortOrder="40" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">data</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Status</label>
+                <dataScope>status</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Kamlesh\Sample\Model\Sample\Source\Status"/>
+                    </settings>
+                </select>
+            </formElements>
         </field>
         
     </fieldset>
