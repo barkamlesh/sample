@@ -1,0 +1,17 @@
+type Sample {
+    entity_id: ID!
+    name: String
+    description: String
+    status: Int
+}
+
+type Query {
+    getSample(entity_id: ID!): Sample @resolver(class: "Kamlesh\\Sample\\Model\\Resolver\\GetSample")
+    getSamples: [Sample] @resolver(class: "Kamlesh\\Sample\\Model\\Resolver\\GetSamples")
+}
+
+type Mutation {
+    addSample(name: String!, description: String!, status: Int!): Sample @resolver(class: "Kamlesh\\Sample\\Model\\Resolver\\AddSample")
+    updateSample(entity_id: ID!, name: String, description: String, status: Int): Sample @resolver(class: "Kamlesh\\Sample\\Model\\Resolver\\UpdateSample")
+    deleteSample(entity_id: ID!): Boolean @resolver(class: "Kamlesh\\Sample\\Model\\Resolver\\DeleteSample")
+}
